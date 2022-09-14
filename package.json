@@ -4,6 +4,7 @@
   "private": true,
   "homepage": "https://dsamyliak.github.io/goit-react-hw-06-phonebook/",
   "dependencies": {
+    "@redux-devtools/extension": "^3.2.3",
     "@reduxjs/toolkit": "^1.8.5",
     "@testing-library/jest-dom": "^5.16.3",
     "@testing-library/react": "^12.1.4",
@@ -45,5 +46,8 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "redux-logger": "^3.0.6"
   }
 }

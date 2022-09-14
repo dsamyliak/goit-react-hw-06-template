@@ -1,16 +1,27 @@
-import { useSelector, useDispatch } from 'react-redux';
-import { increment, decrement } from '../redux/store';
+// import { LoginPage } from 'pages/LoginPage';
+// import { useSelector, useDispatch } from 'react-redux';
+import { Outlet } from 'react-router-dom';
+import { AppBar } from './AppBar';
+// import { add, remove } from '../redux/items/slice';
+// import { increment, decrement} from '../redux/myValue/slice';
+
 
 export const Layout = () => {
-  const dispatch = useDispatch();
-  const value = useSelector(state => state.myValue);
+  // const dispatch = useDispatch();
+  // const value = useSelector(state => state.myValue);
+  // const items = useSelector(state => state.items);
 
   return (
     <div>
-      {value}
+      {/* {value}
       <button onClick={() => dispatch(increment(100))}>Increment</button>
-      <button onClick={() => dispatch(decrement(50))}>Decrement</button>
-      {/* <nav></nav> */}
+      <button onClick={() => dispatch(decrement(50))}>Decrement</button> */}
+      <AppBar />
+      <Outlet />
+      
+      {/* <ul>{items.map(item => <li key={'id' + item}>{item}</li>)}</ul>
+      <button onClick={() => dispatch(add('text'))}>Add Text</button> */}
+     
     </div>
   );
 };
