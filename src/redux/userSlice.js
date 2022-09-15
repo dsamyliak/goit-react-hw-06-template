@@ -10,19 +10,25 @@ export const userSlice = createSlice({
   reducers: {
     logIn(state, action) {
       state.login = action.payload;
-      // state.isLoggedIn = true;
-      if (action.payload.toLowerCase() !== 'julie') {
-        state.isLoggedIn = false;
+    //   state.isLoggedIn = true;
+      if (action.payload === '') {
+          state.isLoggedIn = false;
+          alert("Enter login, please");
+          
       } else {
         state.isLoggedIn = true;
       }
     },
     logPassword(state, action) {
-      state.password = action.payload;
-      if (action.payload !== '12345') {
-        state.isLoggedIn = false;
-      } else {
-        state.isLoggedIn = true;
+        state.password = action.payload;
+        // state.isLoggedIn = true;
+        if (action.payload === '') {
+            state.isLoggedIn = false;
+            alert("Enter password, please");
+        } else {
+            if( state.login !== '' ){ 
+                state.isLoggedIn = true;
+        }
       }
     },
     logOut(state) {

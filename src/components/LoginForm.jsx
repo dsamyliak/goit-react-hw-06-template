@@ -1,7 +1,9 @@
 import { useDispatch } from 'react-redux';
 import { logIn, logPassword } from 'redux/userSlice';
+import { useNavigate } from 'react-router-dom';
 
 export const LoginForm = () => {
+    const navigate = useNavigate();
   const dispatch = useDispatch();
 
   const handleSubmit = e => {
@@ -11,8 +13,8 @@ export const LoginForm = () => {
     console.log(form.elements.password.value);
     dispatch(logIn(form.elements.login.value));
     dispatch(logPassword(form.elements.password.value));
-
-    form.reset();
+      form.reset();
+      navigate('/dashboard', { replace: true });
   };
   return (
     <form onSubmit={handleSubmit}>
