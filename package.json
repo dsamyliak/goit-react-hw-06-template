@@ -1,8 +1,8 @@
 {
-  "name": "goit-react-hw-06-phonebook",
+  "name": "goit-react-hw-06-template",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://dsamyliak.github.io/goit-react-hw-06-phonebook/",
+  "homepage": "https://dsamyliak.github.io/goit-react-hw-06-template/",
   "dependencies": {
     "@redux-devtools/extension": "^3.2.3",
     "@reduxjs/toolkit": "^1.8.5",
